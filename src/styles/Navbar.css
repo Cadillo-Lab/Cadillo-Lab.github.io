@@ -1,0 +1,155 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: white;
+    background-image: url('../assets/background-1.png');
+    height: 80px;
+    position: relative;
+}
+
+/* Logo Section */
+.nav-logo-section {
+    flex: 0 0 auto;
+}
+
+.asu-logo {
+    height: 60px;
+    width: auto;
+    padding-left: 10px;
+}
+.asu-logo {
+  width: 15vw; /* 20% of the viewport width */
+  height: auto;
+  padding-left: -30px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link {
+    color: #191919;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+    letter-spacing: 0.2px;
+    position: relative;
+    /* Added for underline positioning */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+/* Hover effect with animated underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #8c1d40;
+    /* ASU maroon color */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #8c1d40;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+    /* Underline width on hover */
+}
+
+/* Active link style */
+.nav-link.active::after {
+    width: 80%;
+    background-color: #8c1d40;
+}
+
+.separator {
+    color: #191919;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 2px;
+}
+
+/* Banner Section */
+.nav-banner-section {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: auto;
+}
+
+.lab-banner {
+    height: 100px;
+    width: auto;
+    padding-right: 0.5px;
+    object-fit: contain;
+    margin-right: -2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-container {
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: 15px;
+        padding: 6px 8px;
+    }
+
+    .asu-logo {
+        height: 50px;
+    }
+
+    .lab-banner {
+        height: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin: 1rem 0;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .nav-banner-section {
+        display: none;
+    }
+
+    .nav-link::after {
+        bottom: -2px;
+    }
+}

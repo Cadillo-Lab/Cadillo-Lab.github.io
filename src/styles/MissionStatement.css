@@ -1,0 +1,24 @@
+.mission-statement {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-size: cover;
+    /* Cover the background */
+    background-position: center;
+    color: #333;
+    /* Dark text color */
+}
+
+.mission-statement h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mission-statement p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}

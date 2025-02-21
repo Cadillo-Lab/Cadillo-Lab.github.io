@@ -1,0 +1,392 @@
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Full screen height for all devices */
+    width: 100%;
+    /* Full width for the container */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Adjusts for any screen */
+    overflow: hidden;
+    /* Hides extra content */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures full coverage without distortion */
+    z-index: -1;
+}
+
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Mission and Social Media Section */
+.mission-social {
+    padding: 2rem;
+    background-image: url('../assets/background-1.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.mission-social .section-title {
+    margin-bottom: 10px;
+}
+
+.mission-text {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.social-feeds {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.facebook-feed,
+.instagram-feed,
+.bsky-feed {
+    width: 30%;
+    size-adjust: auto;
+    /* Reduced width for all feeds to fit together */
+    max-width: auto;
+    max-height: auto;
+}
+
+.bsky-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0080ff;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hover-text {
+    transition: all 0.3s ease;
+}
+
+/* General styles for the Twitter timeline */
+.twitter-timeline {
+    width: 100%;
+    /* Make the timeline responsive and fit the container */
+    max-width: 600px;
+    /* Set a maximum width for the timeline */
+    margin: 0 auto;
+    /* Center the timeline horizontally */
+    /* Add a border around the timeline (Twitter blue color) */
+    border-radius: 10px;
+    /* Optional: Rounded corners for the border */
+    padding: 10px;
+    /* Padding inside the border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle shadow */
+}
+
+/* Adjusts the iframe inside the Twitter timeline */
+.twitter-timeline iframe {
+    width: 100% !important;
+    /* Ensures the iframe stretches across the container */
+    height: 500px;
+    /* Adjust height to suit the content */
+    border: none;
+    /* Remove the default iframe border */
+    border-radius: 8px;
+    /* Optional: Rounded corners for the iframe */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .twitter-timeline {
+        max-width: 100%;
+        /* Ensure the timeline uses full width on smaller screens */
+        padding: 5px;
+        /* Less padding on smaller screens */
+    }
+
+    .twitter-timeline iframe {
+        height: 400px;
+        /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .twitter-timeline iframe {
+        height: 350px;
+        /* Further adjust height for very small screens */
+    }
+}
+
+.hover-text:hover {
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.hero-content.hover-effect {
+    transition: all 0.3s ease;
+}
+
+.hero-content.hover-effect:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .social-feeds {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facebook-feed,
+    .instagram-feed {
+        width: 100%;
+    }
+}
+
+/* Social Media Feeds container */
+.social-feeds {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 equal-width columns */
+    gap: 30px;
+    /* Space between columns */
+    padding: 20px;
+}
+
+/* Styling for each column */
+.social-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 columns in a row */
+    gap: 20px;
+    /* Space between columns */
+}
+
+.facebook-feed,
+.instagram-feed,
+.stacked-links {
+    width: 100%;
+    max-width: 500px;
+    /* Max width of each feed */
+}
+
+.stacked-links {
+    display: flex;
+    flex-direction: column;
+    /* Stack the BlueSky and Twitter (X) feeds */
+    gap: 10px;
+    /* Space between the stacked items */
+}
+
+.twitter-timeline {
+    width: 100% !important;
+    max-width: 500px;
+}
+
+/* Button styling for BlueSky and Twitter Feed */
+.bsky-link a,
+.twitter-timeline {
+    background-color: #00a1e5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+}
+
+.bsky-link a:hover,
+.twitter-timeline:hover {
+    background-color: #0078b3;
+}
+
+/* Ensure responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .social-feeds {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-feeds {
+        grid-template-columns: 1fr;
+        /* 1 column on very small screens */
+    }
+}
+.stacked-links {
+    margin-top: 50px;
+}
+
+.twitter-feed {
+    padding-bottom: 15px;
+}
+
+
+
+.hero-content {
+    width: 100%;
+    height: auto;
+}
+
+.facebook-feed {
+    margin-left: 5px;
+}
+
+/* Social Media Feeds container */
+.social-feeds {
+    padding: 20px;
+    width: 100%;
+}
+
+/* Main social row container */
+.social-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Individual feed containers */
+.facebook-feed,
+.instagram-feed,
+.stacked-links {
+    flex: 1;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+/* Stacked links container */
+.stacked-links {
+    display: flex;
+    padding-left: 15px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Twitter feed container */
+.twitter-feed {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* BlueSky button */
+.bsky-link a {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #00a1e5;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.bsky-link a:hover {
+    background-color: #0078b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .social-row {
+        flex-wrap: wrap;
+    }
+
+    .facebook-feed,
+    .instagram-feed,
+    .stacked-links {
+        flex: 1 1 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facebook-feed,
+    .instagram-feed,
+    .stacked-links {
+        width: 100%;
+        max-width: 1000px;
+    }
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-box {
+  width: 340px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.x-feed, .bluesky-link {
+  height: 50px;
+}
+
+.section-title {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.section-title::after {
+  display: none !important;
+  border-bottom: none !important;
+}

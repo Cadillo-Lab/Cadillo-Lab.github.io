@@ -1,0 +1,307 @@
+/* Banner Styling */
+
+
+.banner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Topics Styling */
+.topics {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h2research {
+    padding-top: 60px;
+}
+
+.topich2 {
+    padding-top: 60px;
+}
+
+.topics h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.topics p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.topics-slideshow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topic-image {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Projects Section Styling */
+
+
+.projects h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.projects-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.project-header:hover {
+    background-color: #f5f5f5;
+}
+
+.project-title {
+    font-weight: 500;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.dropdown-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.project-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-top: 1px solid transparent;
+}
+
+.project-content.expanded {
+    max-height: 1000px;
+    border-top-color: #e0e0e0;
+}
+
+.project-content p {
+    margin: 0;
+    padding: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects {
+        padding: 1rem;
+    }
+
+    .project-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .project-content p {
+        padding: 1rem;
+    }
+}
+
+.intro {
+    background-image: url("../assets/background-1.png");
+}
+
+.topics {
+    margin-top: -7rem;
+}
+
+.projects {
+    margin-top: -7rem;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-card {
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* Hide overflow when collapsed */
+}
+
+.project-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-content {
+    display: none;
+    padding: 10px;
+    max-height: 300px;
+    /* Limit height, adjust this as needed */
+    overflow-y: auto;
+    /* Allow scrolling if content is too large */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    /* Smooth transition */
+}
+
+.project-content.expanded {
+    display: block;
+    max-height: 10000px;
+    /* Make it large enough to show all content */
+    padding: 10px;
+    /* Ensure padding is visible when expanded */
+}
+
+.project-image {
+    width: 100%;
+    /* Ensure images are responsive */
+    height: auto;
+    margin: 10px 0;
+    /* Space between images and text */
+}
+
+.dropdown-arrow.rotated {
+    transform: rotate(180deg);
+    /* Rotate arrow when expanded */
+}
+
+.project-content p {
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.project-content ul {
+    text-align: left;
+    line-height: 1;
+    margin-left: 20px;
+}
+
+.project-content div {
+    text-align: left;
+}
+
+.project-content img {
+    margin: 1rem 0;
+}
+
+.project-content p {
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    /* Reduced from 1rem to 0.5rem */
+}
+
+.project-image {
+    width: 70%;
+    /* Reduced from 100% */
+    height: auto;
+    margin: 0.5rem 0;
+    /* Reduced from 1rem to 0.5rem */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* If there are specific images inside paragraphs or divs */
+.project-content img {
+    width: 70%;
+    /* Reduced from 100% */
+    height: auto;
+    margin: 0.5rem 0;
+    /* Reduced from 1rem to 0.5rem */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Reduce space between content sections */
+.project-content div {
+    margin-bottom: 0.5rem;
+    /* Add this to reduce space between divs */
+}
+
+.project-content p {
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 0.1rem;
+}
+
+.project-content p+p {
+    margin-top: 0.1rem;
+}
+
+
+body {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.section-title::after, 
+.hover-text::after, 
+h2::after {
+  content: none !important;
+  display: none !important;
+}

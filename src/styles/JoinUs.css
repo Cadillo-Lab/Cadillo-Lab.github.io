@@ -1,0 +1,122 @@
+/* JoinUs.css */
+
+.join-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Removed padding */
+}
+
+.banner-container {
+  width: 100%;
+  text-align: center;
+  margin: 0; /* Removed margin */
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+  margin: 0; /* Removed margin */
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  margin: 0; /* Removed margin */
+}
+
+.opportunity-item-1,
+.opportunity-item-2,
+.opportunity-item-3,
+.opportunity-item-4 {
+  margin: 0; /* Removed margin */
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0; /* Removed margin */
+}
+
+.opportunity-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0; /* Removed margin */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0; /* Removed padding */
+  margin: 0; /* Removed margin */
+}
+
+ul li {
+  font-size: 1rem;
+  margin: 0; /* Removed margin */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.outreach-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0; /* Removed margin */
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 0; /* Removed padding */
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin: 0; /* Removed margin */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0; /* Removed padding */
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
